@@ -108,17 +108,17 @@ print("Classifier Trained!")
 saveData(classifier, "classifier.pickle")
 #'''
 classifier = loadData("classifier.pickle")
-# Predict the labels for the test set
+
+
 print("Classifying the test data...")
 y_pred = classifier.predict(testingData)
-# Evaluate the accuracy of the model
+
 print("Classification finished:\n")
 
+print("Predicting the accuracy of the model...")
 accuracy = classifier.score(testingData, testResponses)
 print("Accuracy:", accuracy)
 
 
-# Assuming X_test contains the test data features and y_test contains the corresponding true labels
-# Predict the labels for the test set
 # Calculate the confusion matrix
 cm = confusion_matrix(testResponses, y_pred, normalize = 'true')
